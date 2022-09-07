@@ -16,7 +16,7 @@ use Scngnr\Mdent\Binance\BinanceClient;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/index',  App\Http\Livewire\index::class);
+Route::get('/index',  App\Http\Livewire\Index::class);
 
 Route::get('schedule/run', function(){
 
