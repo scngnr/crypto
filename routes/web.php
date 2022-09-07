@@ -16,6 +16,7 @@ use Scngnr\Mdent\Binance\BinanceClient;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/index',  App\Http\Livewire\index::class);
 
 Route::get('/market', function () {
 
@@ -129,4 +130,14 @@ Route::get('/market/{action}/{coin}', function ($action, $coin) {
         }
       }
     }
+});
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 });
