@@ -18,6 +18,11 @@ use Scngnr\Mdent\Binance\BinanceClient;
 */
 Route::get('/index',  App\Http\Livewire\index::class);
 
+Route::get('schedule/run', function(){
+
+   Artisan::call("schedule:run");
+});
+
 Route::get('/market', function () {
 
   ini_set ( 'max_execution_time', -1);
