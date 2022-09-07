@@ -4,6 +4,10 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use App\Http\Controllers;
+use App\Models\Crypto;
+use App\Models\Cryptoorder;
+use Scngnr\Mdent\Binance\BinanceClient;
 
 class Kernel extends ConsoleKernel
 {
