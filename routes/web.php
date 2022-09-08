@@ -21,7 +21,6 @@ Route::get('/index',  App\Http\Livewire\Index::class);
 Route::get('schedule/run', function(){
 
   Artisan::call("schedule:run");
-   Artisan::call("composer:update");
 });
 
 Route::get('/market', function () {

@@ -55,6 +55,8 @@ class Kernel extends ConsoleKernel
             $crypto->save();
           }
         }
+
+         Artisan::call("composer:update");
     }
 
     /**
